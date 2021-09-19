@@ -1,7 +1,7 @@
 {
     "name": "forkify",
     "version": "1.0.0",
-    "description": "yp project",
+    "description": "recipes web app",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --development",
@@ -11,10 +11,10 @@
     "author": "Yarden Porat",
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@babel/preset-env": "^7.9.5",
-        "babel-loader": "^8.1.0",
-        "core-js": "^3.6.5",
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
+        "babel-loader": "^8.2.2",
+        "core-js": "^3.17.3",
         "html-webpack-plugin": "^4.2.0",
         "install": "^0.13.0",
         "npm": "^6.14.6",
