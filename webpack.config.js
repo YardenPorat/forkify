@@ -9,7 +9,9 @@ module.exports = {
         filename: 'js/bundle.js',
     },
     devServer: {
-        contentBase: './dist',
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
