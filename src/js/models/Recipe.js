@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export default class Recipe {
   constructor(id) {
     this.id = id;
@@ -8,12 +6,13 @@ export default class Recipe {
   async getRecipe() {
     const url = "https://forkify-api.herokuapp.com/api/get";
     try {
-      const res = await axios(`${url}?rId=${this.id}`);
-      this.title = res.data.recipe.title;
-      this.author = res.data.recipe.publisher;
-      this.img = res.data.recipe.image_url;
-      this.ingredients = res.data.recipe.ingredients;
-      this.url = res.data.recipe.source_url;
+      const res = await fetch(`${url}?rId=${this.id}`);
+      const data = await res.json();
+      this.title = data.recipe.title;
+      this.author = data.recipe.publisher;
+      this.img = data.recipe.image_url;
+      this.ingredients = data.recipe.ingredients;
+      this.url = data.recipe.source_url;
     } catch (error) {
       console.log("something wen't wrong: " + error);
     }
